@@ -37,7 +37,6 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation 'junit:junit:4.12'
     implementation project(':basemvp')
-    implementation(name: 'miit_mdid_1.0.10', ext: 'aar')
     //约束布局
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
