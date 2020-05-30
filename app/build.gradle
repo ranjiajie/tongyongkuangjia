@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.ccico.baseapplication"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            assets.srcDirs = ['assets']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+repositories {//添加一个本地仓库
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    implementation project(':basemvp')
+    implementation(name: 'miit_mdid_1.0.10', ext: 'aar')
+    //约束布局
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+//bind view 当是androidX的时候，需要implementation 10.2.0版本的ButterKnife
+    implementation "com.jakewharton:butterknife:10.2.0"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    annotationProcessor "com.jakewharton:butterknife-compiler:10.2.0"
+}

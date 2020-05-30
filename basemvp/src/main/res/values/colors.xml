@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="error">#eb4333</color>
+    <color name="success">#439b53</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+
+    <!-- Grey -->
+    <color name="grey_1">#EEEEEE</color>
+    <color name="grey_2">#E0E0E0</color>
+    <color name="grey_3">#BDBDBD</color>
+    <color name="grey_4">#9E9E9E</color>
+    <color name="grey_5">#757575</color>
+    <color name="grey_6">#616161</color>
+
+</resources>
